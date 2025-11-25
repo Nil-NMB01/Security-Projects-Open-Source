@@ -1,5 +1,7 @@
 ### Network Infrastructure Setup Demonstration
 
+![alt text](https://raw.githubusercontent.com/Nil-NMB01/Security-Projects-Open-Source/refs/heads/main/media/Network%20Architecture.png)
+
 In this educational video, I demonstrate the configuration of a fictional network infrastructure as part of a assignment. Key elements include:
 
 **DHCP** Configuration: Implementing dynamic IP address assignment for efficient network management. 
