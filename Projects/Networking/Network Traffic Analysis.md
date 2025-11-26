@@ -1,5 +1,7 @@
 # Cybersecurity Incident Report
 
+**In this project,** I investigated a fictive incident where the website **www.yummyrecipesforme.com** suddenly became unreachable for multiple users, displaying the error “destination port unreachable” after a timeout.
+
 ## Output tcpdump CLI
 ![alt text](https://raw.githubusercontent.com/Nil-NMB01/Security-Projects-Open-Source/refs/heads/main/media/Network%20Traffic%20Analysis%20November%202025.png)
 
