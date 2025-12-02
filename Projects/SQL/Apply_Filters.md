@@ -358,7 +358,180 @@ The output I received was:
 ```
 
 ## Retrieve all employees not in IT
-[Add content here.]
+Your team needs to make one more update to employee machines. The employees who are in the Information Technology department already had this update, but employees in all other departments need it. 
+
+The command I used: `select * from employees WHERE NOT department = 'Information Technology';`
+
+The output I received was: 
+
+```
++-------------+--------------+----------+-----------------+-------------+
+| employee_id | device_id    | username | department      | office      |
++-------------+--------------+----------+-----------------+-------------+
+|        1000 | a320b137c219 | elarson  | Marketing       | East-170    |
+|        1001 | b239c825d303 | bmoreno  | Marketing       | Central-276 |
+|        1002 | c116d593e558 | tshah    | Human Resources | North-434   |
+|        1003 | d394e816f943 | sgilmore | Finance         | South-153   |
+|        1004 | e218f877g788 | eraab    | Human Resources | South-127   |
+|        1005 | f551g340h864 | gesparza | Human Resources | South-366   |
+|        1007 | h174i497j413 | wjaffrey | Finance         | North-406   |
+|        1008 | i858j583k571 | abernard | Finance         | South-170   |
+|        1009 | NULL         | lrodriqu | Sales           | South-134   |
+|        1010 | k242l212m542 | jlansky  | Finance         | South-109   |
+|        1011 | l748m120n401 | drosas   | Sales           | South-292   |
+|        1015 | p611q262r945 | jsoto    | Finance         | North-271   |
+|        1016 | q793r736s288 | sbaelish | Human Resources | North-229   |
+|        1017 | r550s824t230 | jclark   | Finance         | North-188   |
+|        1018 | s310t540u653 | abellmas | Finance         | North-403   |
+|        1020 | u899v381w363 | arutley  | Marketing       | South-351   |
+|        1022 | w237x430y567 | arusso   | Finance         | West-465    |
+|        1024 | y976z753a267 | iuduike  | Sales           | South-215   |
+|        1025 | z381a365b233 | jhill    | Sales           | North-115   |
+|        1026 | a998b568c863 | apatel   | Human Resources | West-320    |
+|        1027 | b806c503d354 | mrah     | Marketing       | West-246    |
+|        1028 | c603d749e374 | aestrada | Human Resources | West-121    |
+|        1029 | d336e475f676 | ivelasco | Finance         | East-156    |
+|        1030 | e391f189g913 | mabadi   | Marketing       | West-375    |
+|        1031 | f419g188h578 | dkot     | Marketing       | West-408    |
+|        1034 | i679j565k940 | bsand    | Human Resources | East-484    |
+|        1035 | j236k303l245 | bisles   | Sales           | South-171   |
+|        1036 | k550l533m205 | rjensen  | Marketing       | Central-239 |
+|        1038 | m873n636o225 | btang    | Human Resources | Central-260 |
+|        1039 | n253o917p623 | cjackson | Sales           | East-378    |
+|        1040 | o783p832q294 | dtarly   | Human Resources | East-237    |
+|        1041 | p929q222r778 | cgriffin | Sales           | North-208   |
+|        1042 | q175r338s833 | acook    | Human Resources | West-381    |
+|        1044 | s429t157u159 | tbarnes  | Finance         | West-415    |
+|        1045 | t567u844v434 | pwashing | Finance         | East-115    |
+|        1046 | u429v921w138 | daquino  | Finance         | West-280    |
+|        1047 | v109w587x644 | cward    | Finance         | West-373    |
+|        1048 | w167x592y375 | tmitchel | Finance         | South-288   |
+|        1049 | NULL         | jreckley | Finance         | Central-295 |
+|        1050 | y132z930a114 | csimmons | Finance         | North-468   |
+|        1051 | z451a308b518 | itraora  | Marketing       | Central-134 |
+|        1052 | a192b174c940 | jdarosa  | Marketing       | East-195    |
+|        1053 | b979c871d361 | nemmanue | Human Resources | Central-259 |
+|        1055 | d831e972f553 | awilliam | Marketing       | Central-256 |
+|        1056 | e782f537g683 | ankala   | Marketing       | North-139   |
+|        1057 | f370g535h632 | mscott   | Sales           | South-270   |
+|        1058 | g264h852i697 | madebowa | Marketing       | South-119   |
+|        1059 | h832i322j795 | jnguyen  | Marketing       | South-255   |
+|        1061 | j255k281l925 | nhersh   | Human Resources | East-163    |
+|        1062 | k367l639m697 | redwards | Finance         | North-180   |
+|        1063 | l686m140n569 | lpope    | Sales           | East-226    |
+|        1064 | NULL         | ejones   | Marketing       | South-477   |
+|        1065 | n428o322p522 | imoore   | Human Resources | West-490    |
+|        1066 | o678p794q957 | ttyrell  | Sales           | Central-444 |
+|        1067 | p288q432r721 | lwhite   | Marketing       | North-277   |
+|        1069 | NULL         | jpark    | Finance         | East-110    |
+|        1070 | s772t175u409 | tbailey  | Human Resources | North-204   |
+|        1071 | t244u829v723 | zdutchma | Sales           | West-348    |
+|        1072 | u905v920w694 | esmith   | Sales           | East-421    |
+|        1073 | v135w241x773 | srobinso | Marketing       | Central-494 |
+|        1075 | x573y883z772 | fbautist | Marketing       | East-267    |
+|        1076 | y347z204a710 | fgarcia  | Finance         | Central-270 |
+|        1077 | z654a154b259 | ldavis   | Human Resources | East-241    |
+|        1078 | a667b270c984 | sharley  | Sales           | North-418   |
+|        1079 | b433c245d868 | gmedina  | Marketing       | North-456   |
+|        1080 | c568d742e974 | gmoon    | Marketing       | North-156   |
+|        1081 | d647e310f618 | qcorbit  | Finance         | South-290   |
+|        1083 | f840g812h544 | gkoshi   | Finance         | West-165    |
+|        1084 | g950h972i991 | nhuynh   | Human Resources | South-155   |
+|        1085 | h339i498j269 | cperez   | Sales           | East-325    |
+|        1086 | i281j129k749 | lmajumda | Sales           | West-499    |
+|        1088 | k865l965m233 | rgosh    | Marketing       | East-157    |
+|        1089 | l358m929n154 | jpark2   | Sales           | West-251    |
+|        1091 | n378o313p469 | rtran    | Sales           | Central-230 |
+|        1092 | o391p779q935 | lpark    | Sales           | West-227    |
+|        1093 | p765q957r699 | etargary | Human Resources | Central-247 |
+|        1097 | t363u179v368 | jlee     | Human Resources | South-254   |
+|        1098 | u671v146w618 | tarchamb | Sales           | North-423   |
+|        1099 | v283w690x104 | anaser   | Finance         | West-357    |
+|        1100 | w326x611y598 | mjin     | Human Resources | Central-371 |
+|        1101 | x701y250z303 | ichowdhu | Human Resources | East-233    |
+|        1102 | y943z930a241 | kselassi | Marketing       | South-378   |
+|        1103 | NULL         | randerss | Marketing       | East-460    |
+|        1105 | b551c837d758 | kmei     | Finance         | Central-232 |
+|        1106 | c597d792e215 | jcohen   | Marketing       | South-395   |
+|        1107 | d168e758f876 | akajwara | Sales           | North-471   |
+|        1108 | e113f288g203 | jwashing | Human Resources | North-226   |
+|        1109 | f229g533h679 | nlocklea | Sales           | East-196    |
+|        1110 | g567h376i314 | pchaudhu | Sales           | Central-428 |
+|        1111 | h835i179j862 | jlee     | Sales           | West-309    |
+|        1113 | j781k420l510 | pjaimes  | Human Resources | East-366    |
+|        1114 | NULL         | xgreene  | Marketing       | North-335   |
+|        1116 | m272n572o874 | nzhao    | Sales           | South-100   |
+|        1117 | n683o758p820 | dahmad   | Sales           | West-405    |
+|        1118 | o305p208q337 | jpark3   | Sales           | South-329   |
+|        1119 | p164q780r999 | omubarak | Sales           | West-409    |
+|        1120 | q912r119s313 | rbradsha | Marketing       | Central-200 |
+|        1121 | r628s557t397 | mrojas   | Sales           | East-288    |
+|        1122 | s103t952u851 | btorres  | Finance         | West-319    |
+|        1123 | t479u468v151 | ekonya   | Human Resources | South-445   |
+|        1124 | u340v931w764 | claw     | Human Resources | Central-172 |
+|        1125 | v491w553x421 | mrodgers | Marketing       | South-490   |
+|        1128 | y103z561a649 | mpirato  | Human Resources | West-205    |
+|        1129 | z566a147b347 | plopez   | Marketing       | West-326    |
+|        1130 | a317b635c465 | tsnow    | Sales           | Central-451 |
+|        1132 | c150d982e144 | creddy   | Human Resources | Central-210 |
+|        1133 | d693e351f221 | pfrey    | Marketing       | Central-164 |
+|        1134 | e395f616g566 | akhatri  | Human Resources | West-159    |
+|        1136 | g299h520i457 | jhawes   | Finance         | West-416    |
+|        1137 | h165i539j638 | mwood    | Human Resources | South-166   |
+|        1138 | i671j355k725 | sromero  | Finance         | South-329   |
+|        1139 | j637k986l199 | emorton  | Human Resources | North-300   |
+|        1140 | k982l199m839 | apatel2  | Human Resources | East-385    |
+|        1141 | l282m821n717 | cochuba  | Human Resources | South-282   |
+|        1142 | m674n127o823 | lsilva   | Finance         | East-440    |
+|        1144 | NULL         | erobinso | Finance         | Central-266 |
+|        1145 | p752q137r169 | msosa    | Human Resources | South-345   |
+|        1146 | q228r135s755 | ulemere  | Human Resources | Central-171 |
+|        1147 | r454s225t299 | tvega    | Finance         | West-177    |
+|        1148 | s328t505u907 | dharvey  | Finance         | South-181   |
+|        1150 | u554v512w139 | lmarin   | Marketing       | Central-364 |
+|        1151 | v852w513x954 | sshah    | Human Resources | North-272   |
+|        1152 | NULL         | nwilliam | Marketing       | Central-170 |
+|        1153 | x677y330z296 | ncardena | Marketing       | Central-363 |
+|        1154 | y765z123a548 | obryand  | Marketing       | North-182   |
+|        1155 | z942a966b589 | zjones   | Human Resources | East-122    |
+|        1156 | a184b775c707 | dellery  | Marketing       | East-417    |
+|        1157 | b264c773d977 | lstein   | Human Resources | Central-343 |
+|        1158 | c406d877e950 | bnaser   | Human Resources | Central-243 |
+|        1159 | d881e710f732 | jshen    | Finance         | East-193    |
+|        1160 | e127f591g924 | spham    | Marketing       | West-353    |
+|        1163 | h679i515j339 | cwilliam | Marketing       | East-216    |
+|        1164 | i682j513k442 | fsmeltz  | Finance         | North-163   |
+|        1165 | j713k893l832 | nwords   | Marketing       | South-128   |
+|        1166 | k495l234m708 | nyoung   | Marketing       | Central-397 |
+|        1167 | l738m922n515 | tblackwe | Marketing       | North-443   |
+|        1169 | NULL         | mmitchel | Sales           | Central-250 |
+|        1170 | o156p302q359 | lalvarez | Human Resources | North-278   |
+|        1172 | q372r826s628 | akhan    | Marketing       | Central-360 |
+|        1173 | r537s849t690 | ialcazar | Marketing       | South-429   |
+|        1174 | s371t911u987 | eortiz   | Finance         | North-428   |
+|        1175 | t959u687v394 | jclark2  | Finance         | North-194   |
+|        1176 | u849v569w521 | nliu     | Sales           | West-220    |
+|        1177 | v691w183x928 | aezra    | Human Resources | East-190    |
+|        1178 | w986x187y885 | nlannist | Marketing       | North-196   |
+|        1179 | x174y934z376 | asalas   | Human Resources | North-445   |
+|        1180 | y131z211a578 | medwards | Human Resources | Central-340 |
+|        1181 | z803a233b718 | sessa    | Finance         | South-207   |
+|        1183 | b566c710d544 | lquraish | Human Resources | East-400    |
+|        1184 | c986d200e170 | ptsosie  | Human Resources | Central-247 |
+|        1185 | d790e839f461 | revens   | Sales           | North-330   |
+|        1186 | e281f433g404 | sacosta  | Sales           | North-460   |
+|        1187 | f963g637h851 | bbode    | Finance         | East-351    |
+|        1188 | g164h566i795 | noshiro  | Finance         | West-252    |
+|        1189 | h784i120j837 | slefkowi | Human Resources | West-342    |
+|        1190 | NULL         | kcarter  | Marketing       | Central-270 |
+|        1191 | NULL         | shakimi  | Marketing       | Central-366 |
+|        1194 | m340n287o441 | zwarren  | Human Resources | West-212    |
+|        1195 | n516o853p957 | orainier | Finance         | East-346    |
+|        1198 | q308r573s459 | jmartine | Marketing       | South-117   |
+|        1199 | r520s571t459 | areyes   | Human Resources | East-100    |
++-------------+--------------+----------+-----------------+-------------+
+161 rows in set (0.001 sec)
+```
 
 ## Summary
-[Add content here.]
+In these actions I performed a whole lot of steps on how to filter information through a database using SQL, making use of filters.
