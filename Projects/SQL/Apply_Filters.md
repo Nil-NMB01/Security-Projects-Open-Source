@@ -290,7 +290,25 @@ And the output I received was
 ```
 
 ## Retrieve employees in Marketing
-[Add content here.]
+Your team wants to perform security updates on specific employee machines in the Marketing department. You’re responsible for getting information on these employee machines and will need to query the employees table. 
+
+The command I used was `select * from employees WHERE department = 'Marketing'AND office LIKE 'East%';`
+
+And the output I received was:
+```
++-------------+--------------+----------+------------+----------+
+| employee_id | device_id    | username | department | office   |
++-------------+--------------+----------+------------+----------+
+|        1000 | a320b137c219 | elarson  | Marketing  | East-170 |
+|        1052 | a192b174c940 | jdarosa  | Marketing  | East-195 |
+|        1075 | x573y883z772 | fbautist | Marketing  | East-267 |
+|        1088 | k865l965m233 | rgosh    | Marketing  | East-157 |
+|        1103 | NULL         | randerss | Marketing  | East-460 |
+|        1156 | a184b775c707 | dellery  | Marketing  | East-417 |
+|        1163 | h679i515j339 | cwilliam | Marketing  | East-216 |
++-------------+--------------+----------+------------+----------+
+7 rows in set (0.001 sec)
+```
 
 ## Retrieve employees in Finance or Sales
 [Add content here.]
