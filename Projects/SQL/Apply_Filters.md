@@ -311,7 +311,51 @@ And the output I received was:
 ```
 
 ## Retrieve employees in Finance or Sales
-[Add content here.]
+Your team now needs to perform a different security update on machines for employees in the Sales and Finance departments. 
+
+The command I used was: `SELECT * from employees WHERE department = 'Sales' OR 'Finance';`
+
+The output I received was:
+```
++-------------+--------------+----------+------------+-------------+
+| employee_id | device_id    | username | department | office      |
++-------------+--------------+----------+------------+-------------+
+|        1009 | NULL         | lrodriqu | Sales      | South-134   |
+|        1011 | l748m120n401 | drosas   | Sales      | South-292   |
+|        1024 | y976z753a267 | iuduike  | Sales      | South-215   |
+|        1025 | z381a365b233 | jhill    | Sales      | North-115   |
+|        1035 | j236k303l245 | bisles   | Sales      | South-171   |
+|        1039 | n253o917p623 | cjackson | Sales      | East-378    |
+|        1041 | p929q222r778 | cgriffin | Sales      | North-208   |
+|        1057 | f370g535h632 | mscott   | Sales      | South-270   |
+|        1063 | l686m140n569 | lpope    | Sales      | East-226    |
+|        1066 | o678p794q957 | ttyrell  | Sales      | Central-444 |
+|        1071 | t244u829v723 | zdutchma | Sales      | West-348    |
+|        1072 | u905v920w694 | esmith   | Sales      | East-421    |
+|        1078 | a667b270c984 | sharley  | Sales      | North-418   |
+|        1085 | h339i498j269 | cperez   | Sales      | East-325    |
+|        1086 | i281j129k749 | lmajumda | Sales      | West-499    |
+|        1089 | l358m929n154 | jpark2   | Sales      | West-251    |
+|        1091 | n378o313p469 | rtran    | Sales      | Central-230 |
+|        1092 | o391p779q935 | lpark    | Sales      | West-227    |
+|        1098 | u671v146w618 | tarchamb | Sales      | North-423   |
+|        1107 | d168e758f876 | akajwara | Sales      | North-471   |
+|        1109 | f229g533h679 | nlocklea | Sales      | East-196    |
+|        1110 | g567h376i314 | pchaudhu | Sales      | Central-428 |
+|        1111 | h835i179j862 | jlee     | Sales      | West-309    |
+|        1116 | m272n572o874 | nzhao    | Sales      | South-100   |
+|        1117 | n683o758p820 | dahmad   | Sales      | West-405    |
+|        1118 | o305p208q337 | jpark3   | Sales      | South-329   |
+|        1119 | p164q780r999 | omubarak | Sales      | West-409    |
+|        1121 | r628s557t397 | mrojas   | Sales      | East-288    |
+|        1130 | a317b635c465 | tsnow    | Sales      | Central-451 |
+|        1169 | NULL         | mmitchel | Sales      | Central-250 |
+|        1176 | u849v569w521 | nliu     | Sales      | West-220    |
+|        1185 | d790e839f461 | revens   | Sales      | North-330   |
+|        1186 | e281f433g404 | sacosta  | Sales      | North-460   |
++-------------+--------------+----------+------------+-------------+
+33 rows in set, 5 warnings (0.001 sec)
+```
 
 ## Retrieve all employees not in IT
 [Add content here.]
